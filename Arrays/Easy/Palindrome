@@ -1,0 +1,18 @@
+Given an integer x, return true if x is a palindrome, and false otherwise.
+
+class Solution {
+    public boolean isPalindrome(int x) {
+        if(x <0){
+            return false;
+        }
+        int rev = 0;
+        int ori = x;
+        while(ori > 0){
+            int num= ori % 10;
+            rev = rev * 10 + num;
+            ori = ori / 10;
+        }
+        System.out.println(rev);
+        return (rev == x);
+    }
+}
